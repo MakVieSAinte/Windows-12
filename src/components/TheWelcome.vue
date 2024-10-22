@@ -4,6 +4,7 @@
     @click="closeCustomMenu"
     class="relative w-full h-full"
   >
+  
     <div
       v-if="step == 1"
       class="pre-power w-full h-full fixed inset-0 bg-black flex items-center justify-center flex-col pb-20"

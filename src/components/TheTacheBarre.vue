@@ -34,7 +34,7 @@
             <div class="item w-[34px] h-[34px] backdrop-blur hover:bg-[#ffffff1a] p-[6px] rounded-[4px]">
                 <img src="../assets/images/Chat.png" alt="windows">
             </div>
-            <div class="item w-[34px] h-[34px] backdrop-blur hover:bg-[#ffffff1a] p-[6px] rounded-[4px]">
+            <div @click="OpenFileExplorer()" class="item w-[34px] h-[34px] backdrop-blur hover:bg-[#ffffff1a] p-[6px] rounded-[4px]" :class="openFileExplorer ? 'bg-[#ffffff1a]' : ''">
                 <img src="../assets/images/file Explorer.png" alt="windows">
             </div>
             <div class="item w-[34px] h-[34px] backdrop-blur hover:bg-[#ffffff1a] p-[6px] rounded-[4px]">
@@ -72,24 +72,33 @@
             </div>
         </div>
 
+
+            <div v-if="openFileExplorer" class="absolute left-[20%] bottom-16">
+            <TheFileExplorerVue></TheFileExplorerVue>
+            </div>
     </div>
 </template>
 
 <script lang="ts">
+import TheFileExplorerVue from './TheFileExplorer.vue'
 import TheMenuDemarreVue from './TheMenuDemarre.vue'
 
 export default {
-      components: { TheMenuDemarreVue },
+      components: { TheMenuDemarreVue, TheFileExplorerVue },
 
       data() {
         return {
-            openDemarrerMenu: false
+            openDemarrerMenu: false,
+            openFileExplorer: false
         }
       },
 
       methods: {
         OpenDemarrerMenu() {
       this.openDemarrerMenu = !this.openDemarrerMenu
+    },
+        OpenFileExplorer() {
+      this.openFileExplorer = !this.openFileExplorer
     },
     handleKeydown(event: KeyboardEvent) {
       if (event.key === 'Meta' || event.key === 'OS') {
