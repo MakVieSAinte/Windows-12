@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[595px] h-[600px] flex flex-col justify-between rounded-[5px] border border-bordure/10 backdrop-blur-xl pt-8 bg-fond overflow-hidden">
+    <div class="w-[595px] h-[600px] flex flex-col justify-between rounded-[5px] border border-bordure/10 backdrop-blur-xl pt-8 bg-fond overflow-hidden" style="z-index: 9999999999999999999999999999999999999999999999999999999px;">
 
 <div>
 

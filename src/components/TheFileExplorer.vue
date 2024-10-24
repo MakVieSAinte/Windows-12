@@ -1,9 +1,10 @@
 <template>
   <div
-    class="w-[1000px] h-[590px] rounded-[5px] bg-white/95 backdrop-blur-2xl overflow-hidden p-0 m-0"
+  ref="draggableElement"
+    class="draggable-element w-[1000px] h-[600px] rounded-[5px] bg-white backdrop-blur-2xl overflow-hidden p-0 m-0"
   >
 
-    <div class="top-explorer flex justify-between items-center bg-slate-300/30 w-full h-[42px] p-0 m-0">
+    <div class="top-explorer flex justify-between items-center bg-slate-300/30 w-full h-[42px] p-0 m-0 border-b border-slate-200">
 
         <div class="flex items-center justify-start">
             <div class="icon-window flex items-center justify-between gap-1 h-[38px] w-[208px] pl-3 pr-2 ml-4 mt-4 bg-white/80 rounded-[7px]">
@@ -36,7 +37,7 @@
     </div>
 
     <!-- Top One -->
-    <div class="top-one flex items-center justify-start gap-2 bg-white/80 w-full h-[48px] px-3 py-1">
+    <div class="top-one flex items-center justify-start gap-2 bg-white/80 w-full h-[48px] px-3 py-1 border-b border-slate-100">
         <div class="flex items-center gap-1">
             <div class="flex items-center justify-end hover:bg-slate-100 px-3 py-2 rounded-[4px]">
             <img src="../assets/images/File/fleche-droit.png" alt="close" width="12px">
@@ -105,13 +106,15 @@
     </div>
     
     <!-- Top Deux -->
-    <div class="top-one flex items-center justify-between gap-2 bg-white/80 w-full h-[48px] px-3 py-1">
+    <div class="top-one flex items-center justify-between gap-2 bg-white/80 w-full h-[48px] px-3 py-1 border-b border-slate-200">
         <div class="flex items-center gap-0">
             <div class="flex items-center justify-end hover:bg-slate-100 px-3 py-2 rounded-[4px]">
             <img src="../assets/images/File/nouveau-file.png" alt="close" width="15px">
             <span class="text-[10px] text-gray-900 ml-2">Nouveau</span>
             </div>
-            
+
+            <span class="separator w-[0.8px] h-5 block bg-slate-200 mx-1"></span>
+
             <div class="flex items-center justify-end hover:bg-slate-100 px-3 py-2 rounded-[4px]">
             <img src="../assets/images/File/couper-icon.png" alt="close" width="14px">
             </div>
@@ -130,6 +133,9 @@
             <div class="flex items-center justify-end hover:bg-slate-100 px-3 py-2 rounded-[4px]">
             <img src="../assets/images/File/supprimer-icon.png" alt="close" width="14px">
             </div>
+
+            <span class="separator w-[0.8px] h-5 block bg-slate-200 mx-1"></span>
+
             <div class="flex items-center justify-end hover:bg-slate-100 px-3 py-2 rounded-[4px]">
             <img src="../assets/images/File/trier-icon.png" alt="close" width="14px">
             <span class="text-[10px] text-gray-900 ml-2">Trier</span>
@@ -140,8 +146,6 @@
             </div>
         </div>
 
-
-
         <!--  -->
         <div class="flex items-center gap-1 my-2 rounded-[5px]">
             <div class="flex items-center justify-end hover:bg-slate-100 px-3 py-2 rounded-[4px]">
@@ -151,12 +155,175 @@
         </div>
     </div>
 
+    <!-- Corp Explorer -->
+    <div class="w-full h-max flex">
+
+        <!-- Side bar -->
+        <div class="sidebar flex items-center flex-col w-[240px] h-[100vh] bg-white px-1 border-r border-slate-200">
+            <div class="w-full item flex items-center justify-start gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 pl-6 mt-1 cursor-pointer">
+                <img src="../assets/images/File/accueil.png" alt="">
+                <span class="text-[12px] text-gray-900">Accueil</span>
+            </div>
+            
+            <div class="w-full item flex items-center justify-start gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 pl-6 cursor-pointer">
+                <img src="../assets/images/File/galery.png" alt="">
+                <span class="text-[12px] text-gray-900">Galerie</span>
+            </div>
+            
+            <div class="w-full item flex items-center justify-start gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 pl-6 cursor-pointer">
+                <img src="../assets/images/File/one-drive.png" alt="" width="16px">
+                <span class="text-[12px] text-gray-900">OneDrive personnal</span>
+            </div>
+
+            <span class="separator w-[150px] h-[0.3px] block bg-slate-100 mx-1 my-1"></span>
+            
+            <div class="w-full item flex items-center justify-between gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 pl-6 cursor-pointer">
+                <div class="flex items-center gap-2">
+                <img src="../assets/images/File/bureau.png" alt="" width="16px">
+                <span class="text-[12px] text-gray-900">Bureau</span>
+                </div>
+                <img src="../assets/images/File/epingle.png" alt="" width="9px" class="mr-2">
+            </div>
+
+            <div class="w-full item flex items-center justify-between gap-2 bg-slate-100 rounded-[4px] py-2 pl-6 my-1 cursor-pointer">
+                <div class="flex items-center gap-2">
+                <img src="../assets/images/File/ducument.png" alt="" width="16px">
+                <span class="text-[12px] text-gray-900">Documents</span>
+                </div>
+                <img src="../assets/images/File/epingle.png" alt="" width="9px" class="mr-2">
+            </div>
+
+            <div class="w-full item flex items-center justify-between gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 pl-6 cursor-pointer">
+                <div class="flex items-center gap-2">
+                <img src="../assets/images/File/telecharger.png" alt="" width="16px">
+                <span class="text-[12px] text-gray-900">Téléchargements</span>
+                </div>
+                <img src="../assets/images/File/epingle.png" alt="" width="9px" class="mr-2">
+            </div>
+            
+            <div class="w-full item flex items-center justify-between gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 pl-6 cursor-pointer">
+                <div class="flex items-center gap-2">
+                <img src="../assets/images/File/musique.png" alt="" width="16px">
+                <span class="text-[12px] text-gray-900">Musique</span>
+                </div>
+                <img src="../assets/images/File/epingle.png" alt="" width="9px" class="mr-2">
+            </div>
+            
+            <div class="w-full item flex items-center justify-between gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 pl-6 cursor-pointer">
+                <div class="flex items-center gap-2">
+                <img src="../assets/images/File/photos.png" alt="" width="16px">
+                <span class="text-[12px] text-gray-900">Photos</span>
+                </div>
+                <img src="../assets/images/File/epingle.png" alt="" width="9px" class="mr-2">
+            </div>
+            
+            <div class="w-full item flex items-center justify-between gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 pl-6 cursor-pointer">
+                <div class="flex items-center gap-2">
+                <img src="../assets/images/File/videos.png" alt="" width="16px">
+                <span class="text-[12px] text-gray-900">Vidéos</span>
+                </div>
+                <img src="../assets/images/File/epingle.png" alt="" width="9px" class="mr-2">
+            </div>
+            
+            <div class="w-full item flex items-center justify-between gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 pl-6 cursor-pointer">
+                <div class="flex items-center gap-2">
+                <img src="../assets/images/File/dossier-sidebar.png" alt="" width="16px">
+                <span class="text-[12px] text-gray-900">MakVieSAinte pro...</span>
+                </div>
+                <!-- <img src="../assets/images/File/epingle.png" alt="" width="9px" class="mr-2"> -->
+            </div>
+
+            <span class="separator w-[150px] h-[0.3px] block bg-slate-100 mx-1 my-1"></span>
+
+            <div class="w-full item flex items-center justify-end flex-row-reverse gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 px-8 pl-3 cursor-pointer">
+                <div class="flex items-center gap-2">
+                <img src="../assets/images/File/ce-pc.png" alt="" width="16px">
+                <span class="text-[12px] text-gray-900">Ce PC</span>
+                </div>
+                <img src="../assets/images/File/fleche-ce-pc.png" alt="" width="4px" class="mr-1">
+            </div>
+            
+            <div class="w-full item flex items-center justify-end flex-row-reverse gap-2 bg-transparent hover:bg-slate-100 rounded-[4px] py-2 px-5 pl-6 cursor-pointer">
+                <div class="flex items-center gap-2">
+                <img src="../assets/images/File/disque-dur.png" alt="" width="16px">
+                <span class="text-[12px] text-gray-900">MakVieSAinte (c:)</span>
+                </div>
+                <img src="../assets/images/File/fleche-ce-pc.png" alt="" width="4px" class="mr-1">
+            </div>
+
+        </div>
+
+        <!-- Contenue dossier -->
+        <div class="flex items-start w-full py-3 px-3 gap-4">
+            <div class="item w-1/4 flex items-center justify-center flex-col hover:bg-slate-100 rounded-[3px] py-3">
+                <img src="../assets/images/File/dossier.png" alt="">
+                <span class="text-[14px] text-gray-900">Adobe</span>
+            </div>
+            <div class="item w-1/4 flex items-center justify-center flex-col hover:bg-slate-100 rounded-[3px] py-3">
+                <img src="../assets/images/File/dossier.png" alt="">
+                <span class="text-[14px] text-gray-900">Cours Udemy</span>
+            </div>
+          
+            <div class="item w-1/4 flex items-center justify-center flex-col hover:bg-slate-100 rounded-[3px] py-3">
+                <img src="../assets/images/File/dossier.png" alt="">
+                <span class="text-[14px] text-gray-900">Projet soutenance BTS</span>
+            </div>
+            <div class="item w-1/4 flex items-center justify-center flex-col hover:bg-slate-100 rounded-[3px] py-3">
+                <img src="../assets/images/File/word-file.png" alt="">
+                <span class="text-[14px] text-gray-900">cours-english.docx</span>
+            </div>
+
+        </div>
+    </div>
+
   </div>
 </template>
 
-<script>
-export default {}
+<script lang="ts">
+import { defineComponent, onMounted, ref } from 'vue';
+import interact from 'interactjs';
+
+export default defineComponent({
+  name: 'MonComposant',
+  setup() {
+    const draggableElement = ref<HTMLDivElement | null>(null);
+
+    onMounted(() => {
+      if (draggableElement.value) {
+        interact(draggableElement.value)
+          .draggable({
+            listeners: {
+              move(event) {
+                const target = event.target as HTMLElement;
+                // Récupérer les coordonnées actuelles (ou initialisées)
+                const x = (parseFloat(target.getAttribute('data-x')!) || 0) + event.dx;
+                const y = (parseFloat(target.getAttribute('data-y')!) || 0) + event.dy;
+
+                // Appliquer la translation avec CSS
+                target.style.transform = `translate(${x}px, ${y}px)`;
+
+                // Stocker les nouvelles coordonnées
+                target.setAttribute('data-x', x.toString());
+                target.setAttribute('data-y', y.toString());
+              },
+            },
+          });
+      }
+    });
+
+    return {
+      draggableElement,
+    };
+  },
+});
+
 </script>
 
 <style>
+
+.draggable-element {
+  /* Ajoutez d'autres styles si nécessaire */
+  cursor: move;
+}
+
 </style>

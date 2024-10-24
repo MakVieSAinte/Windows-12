@@ -73,7 +73,7 @@
         </div>
 
 
-            <div v-if="openFileExplorer" class="absolute left-[20%] bottom-16">
+            <div ref="draggableElement" v-if="openFileExplorer" class="absolute left-[20%] bottom-16">
             <TheFileExplorerVue></TheFileExplorerVue>
             </div>
     </div>
