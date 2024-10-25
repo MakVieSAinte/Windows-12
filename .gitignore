@@ -13,6 +13,8 @@ dist
 dist-ssr
 coverage
 *.local
+vscode/
+faire.txt
 
 /cypress/videos/
 /cypress/screenshots/
@@ -26,5 +28,6 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+*.faire.txt
 
 *.tsbuildinfo

@@ -2,66 +2,29 @@
   <div
     @contextmenu.prevent="openCustomMenu"
     @click="closeCustomMenu"
-    class="relative w-full h-full"
+    class="relative w-full h-full bg-black will-change-auto"
   >
-  
-    <div
-      v-if="step == 1"
-      class="pre-power w-full h-full fixed inset-0 bg-black flex items-center justify-center flex-col pb-20"
-    >
-      <div class="mb-20">
-        <img src="../assets/images/windows.svg" alt="windows" width="130px" />
-      </div>
+    <!-- Page Load -->
 
-      <div class="loading">
-        <div class="load">
-          <div class="dot dot1"></div>
-        </div>
-        <div class="load">
-          <div class="dot dot2"></div>
-        </div>
-        <div class="load">
-          <div class="dot dot3"></div>
-        </div>
-        <div class="load">
-          <div class="dot dot4"></div>
-        </div>
-        <div class="load">
-          <div class="dot dot5"></div>
-        </div>
-        <div class="load">
-          <div class="dot dot6"></div>
-        </div>
-        <div class="load">
-          <div class="dot dot7"></div>
-        </div>
-      </div>
+    <div v-if="step == 1" style="z-index: 999999999999999999999999 !important">
+      <TheLoad></TheLoad>
     </div>
 
-    <div
-      v-if="step == 9"
-      class="fond-lock w-full h-full fixed inset-0 bg-black flex items-center justify-center flex-col pb-20"
-    ></div>
+    <!-- Page Auth -->
 
-    <div v-if="step == 2" class="fond w-full h-full bg-slate-400 fixed inset-0">
-      <div class="relative">
-        <TheTacheBarre></TheTacheBarre>
-      </div>
+    <!-- <div v-if="step == 2">
+      <TheAuth></TheAuth>
+    </div> -->
+
+    <!-- Burreau Windows -->
+
+    <div v-if="step == 2" style="z-index: 9999999999999999999 !important">
+      <TheBurreau></TheBurreau>
     </div>
 
-    <!-- Custom menu -->
-    <div class="w-full h-full">
-      <!-- Zone principale où le clic droit est activé -->
-      <div class="p-5">
-        Faites un clic droit n'importe où pour afficher le menu contextuel
-        personnalisé.
-      </div>
+    <!-- Menu contextuel -->
 
-      <!-- Menu contextuel personnalisé -->
-
-      display: block; width: 200px; box-shadow: 0 5px 15px #1111118c; position:
-      fixed; background-color: #111;
-
+    <div class="w-full h-full" style="z-index: 99999999999999999999 !important">
       <div
         v-if="showCustomMenu"
         :style="{ top: customMenuY + 'px', left: customMenuX + 'px' }"
@@ -83,7 +46,7 @@
             <img src="../assets/images/ChevronRightMed.png" alt="" />
           </span>
         </div>
-        
+
         <div
           class="w-full flex items-center justify-between text-sm text-white text-left py-3 px-5 hover:bg-[#ffffff1a] border-b border-secondary/10"
         >
@@ -117,7 +80,7 @@
             <img src="../assets/images/ChevronRightMed.png" alt="" />
           </span>
         </div>
-        
+
         <div
           class="w-full flex items-center justify-between text-sm text-white text-left py-3 px-5 hover:bg-[#ffffff1a] border-b border-secondary/10"
         >
@@ -134,7 +97,7 @@
             <!-- <img src="../assets/images/ChevronRightMed.png" alt="" /> -->
           </span>
         </div>
-        
+
         <div
           class="w-full flex items-center justify-between text-sm text-white text-left py-3 px-5 hover:bg-[#ffffff1a] border-b border-secondary/10"
         >
@@ -151,7 +114,7 @@
             <!-- <img src="../assets/images/ChevronRightMed.png" alt="" /> -->
           </span>
         </div>
-        
+
         <div
           class="w-full flex items-center justify-between text-sm text-white text-left py-3 px-5 hover:bg-[#ffffff1a]"
         >
@@ -168,17 +131,20 @@
             <!-- <img src="../assets/images/ChevronRightMed.png" alt="" /> -->
           </span>
         </div>
-
       </div>
     </div>
+
   </div>
 </template>
 
 <script lang="ts">
+import TheAuth from './TheAuth.vue'
+import TheBurreau from './TheBurreau.vue'
+import TheLoad from './TheLoad.vue'
 import TheTacheBarre from './TheTacheBarre.vue'
 
 export default {
-  components: { TheTacheBarre },
+  components: { TheTacheBarre, TheLoad, TheAuth, TheBurreau },
 
   data() {
     return {
@@ -212,19 +178,4 @@ export default {
 </script>
 
 <style>
-.custom-menu {
-}
-.custom-menu button {
-  width: 100%;
-  text-align: left;
-  background-color: #111;
-  color: #e7e7e7;
-  font-size: 14px;
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-}
-.custom-menu button:hover {
-  background-color: #1d73cf;
-}
 </style>

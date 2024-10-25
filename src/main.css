@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 
-*, body {
+*,
+body {
     font-family: 'Segoe UI Variable Small' !important;
+    cursor: default;
 }
 
 *::selection {
@@ -12,7 +14,7 @@
 }
 
 body {
-    @apply text-secondary
+    @apply text-secondary transition-all;
 }
 
 .truncate-text {
@@ -20,7 +22,8 @@ body {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-  }
+}
+
 
 .fond {
     width: 100%;
@@ -48,7 +51,9 @@ body {
     background-color: #ffffff02;
 }
 
-.loading .load{
+/* Loader */
+
+.loading .load {
     position: absolute;
     width: 30px;
     margin-left: -15px;
@@ -56,37 +61,45 @@ body {
     animation: animate 2.2s infinite;
 
 }
-.load:nth-child(2){
+
+.load:nth-child(2) {
     animation-delay: 0.0s;
 }
-.load:nth-child(3){
+
+.load:nth-child(3) {
     animation-delay: 0.1s;
 }
-.load:nth-child(4){
+
+.load:nth-child(4) {
     animation-delay: 0.3s;
 }
-.load:nth-child(5){
+
+.load:nth-child(5) {
     animation-delay: 0.5s;
 }
-.load:nth-child(6){
+
+.load:nth-child(6) {
     animation-delay: 0.9s;
 }
-.load:nth-child(7){
+
+.load:nth-child(7) {
     animation-delay: 0.6s;
 }
+
 @keyframes animate {
-    from{
+    from {
         transform: rotate(0deg);
         opacity: 1;
 
     }
-    to{
+
+    to {
         transform: rotate(360deg);
-    
+
     }
 }
 
-.loading .load .dot{
+.loading .load .dot {
     width: 5px;
     height: 5px;
     border-radius: 50%;
