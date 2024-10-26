@@ -65,7 +65,7 @@
                 </div>
                 <div class="item p-[5px]">
                     <!-- <p>wifi</p> -->
-                    <img src="./src/assets/images/Wifi.png" alt="wifi">
+                    <!-- <img src="./src/assets/images/Wifi.png" alt="wifi"> -->
                 </div>
             </div>  
 

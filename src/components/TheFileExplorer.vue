@@ -467,7 +467,7 @@
         </d12v>
 
         <span
-          class="separator w-[150px] h-[0.3px] block bg-slate-100 mx-1 my-1"
+          class="separator w-[150px] h-[0.3px] block bg-neutral-800 mx-1 my-1"
         ></span>
 
         <div

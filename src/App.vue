@@ -6,10 +6,10 @@ export default {
   component: { RouterView },
 
   setup() {
-    const isSmallScreen = ref(window.innerWidth < 900)
+    const isSmallScreen = ref(window.innerWidth < 1000)
 
     const checkScreenSize = () => {
-      isSmallScreen.value = window.innerWidth < 900
+      isSmallScreen.value = window.innerWidth < 1000
     }
 
     onMounted(() => {
