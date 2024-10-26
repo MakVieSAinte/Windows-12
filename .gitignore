@@ -14,7 +14,6 @@ dist-ssr
 coverage
 *.local
 vscode/
-faire.txt
 
 /cypress/videos/
 /cypress/screenshots/
@@ -28,6 +27,5 @@ faire.txt
 *.njsproj
 *.sln
 *.sw?
-*.faire.txt
 
 *.tsbuildinfo
