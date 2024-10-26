@@ -64,9 +64,9 @@
                     <img src="../assets/images/Speaker.png" alt="windows">
                 </div>
                 <div class="item p-[5px]">
-                    <img src="../assets/images/wifi.png" alt="windows wifi">
+                    <img src="../assets/images/Wifi.png" alt="windows wifi">
                 </div>
-            </div>
+            </div>  
 
             <div class="item flex items-center justify-center w-[30px] h-[30px] backdrop-blur hover:bg-[#ffffff1a] p-[6px] rounded-[4px]">
                 <img src="../assets/images/Overflow.png" alt="windows">
