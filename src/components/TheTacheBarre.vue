@@ -64,8 +64,8 @@
                     <img src="../assets/images/Speaker.png" alt="windows">
                 </div>
                 <div class="item p-[5px]">
-                    <p>wifi</p>
-                    <!-- <img src="./src/assets/images/Wifi.png" alt="wifi"> -->
+                    <!-- <p>wifi</p> -->
+                    <img src="./src/assets/images/Wifi.png" alt="wifi">
                 </div>
             </div>  
 
