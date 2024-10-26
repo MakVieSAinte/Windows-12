@@ -1,14 +1,15 @@
 <template>
   <div
     ref="draggableElement"
-    class="draggable-element w-[1000px] h-[600px] rounded-[5px] bg-white backdrop-blur-2xl overflow-hidden p-0 m-0"
+    class="draggable-element w-[1000px] h-[600px] rounded-[5px] bg-transparent backdrop-blur-3xl overflow-hidden p-0 m-0"
   >
+
     <div
-      class="top-explorer flex justify-between items-center bg-slate-300/30 w-full h-[42px] p-0 m-0 border-b border-slate-200"
+      class="top-explorer flex justify-between items-center backdrop-blur-3xl bg-gray-950/30 w-full h-[42px] p-0 m-0 box-border border-b border-neutral-800"
     >
       <div class="flex items-center justify-start">
         <div
-          class="icon-window flex items-center justify-between gap-1 h-[38px] w-[208px] pl-3 pr-2 ml-4 mt-4 bg-white/80 rounded-[7px]"
+          class="icon-window flex items-center justify-between gap-1 h-[38px] w-[208px] pl-3 pr-2 ml-4 mt-2 backdrop-blur-1xl bg-gray-800/40" style="border-radius: 7px 7px 0px 0px;"
         >
           <div class="flex items-center justify-start gap-1">
             <img src="../assets/images/File/documents.png" alt="" />
@@ -17,10 +18,10 @@
             >
           </div>
           <div
-            class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded"
+            class="flex items-center justify-end hover:bg-gray-800/80 px-3 py-2 rounded"
           >
             <img
-              src="../assets/images/File/Close.png"
+              src="../assets/images/File/svg/x-2.svg"
               alt="close"
               width="8px"
             />
@@ -28,46 +29,46 @@
         </div>
 
         <div
-          class="flex items-center justify-end hover:bg-white/5 mt-3 mb-1 ml-1 px-3 py-2 rounded-[4px]"
+          class="flex items-center justify-end hover:bg-gray-800/80 mt-3 mb-1 ml-1 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/plus-head.png"
+            src="../assets/images/File/svg/plus.svg"
             alt="close"
             width="11px"
           />
         </div>
       </div>
 
-      <!-- Section close et autrees -->
+      <!-- Section close et autres -->
       <div class="flex gap-0">
         <div
-          class="icon-window flex items-center justify-center h-[42px] w-max px-6 hover:bg-slate-300/30"
+          class="icon-window flex items-center justify-center h-[42px] w-max px-6 hover:bg-gray-800/80"
         >
-          <img src="../assets/images/File/Minimize.png" alt="" />
+          <img src="../assets/images/File/svg/trait.svg" alt="" />
         </div>
         <div
-          class="icon-window flex items-center justify-center h-[42px] w-max px-6 hover:bg-slate-300/30"
+          class="icon-window flex items-center justify-center h-[42px] w-max px-6 hover:bg-gray-800/80"
         >
-          <img src="../assets/images/File/Maximize.png" alt="" />
+          <img src="../assets/images/File/svg/carre.svg" alt="" />
         </div>
         <div
           class="icon-window flex items-center justify-center h-[42px] w-max px-6 hover:bg-red-700"
         >
-          <img src="../assets/images/File/Close.png" alt="" />
+          <img src="../assets/images/File/svg/x.svg" alt="" />
         </div>
       </div>
     </div>
 
     <!-- Top One -->
     <div
-      class="top-one flex items-center justify-start gap-2 bg-white/80 w-full h-[48px] px-3 py-1 border-b border-slate-100"
+      class="top-one flex items-center justify-start gap-2 backdrop-blur-3xl bg-gray-950/70 w-full h-[48px] px-3 py-1 border-b border-neutral-800"
     >
       <div class="flex items-center gap-1">
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/fleche-droit.png"
+            src="../assets/images/File/svg/left.svg"
             alt="close"
             width="12px"
           />
@@ -76,27 +77,25 @@
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/fleche-droit.png"
+            src="../assets/images/File/svg/right.svg"
             alt="close"
             width="12px"
-            class="rotate-180"
           />
         </div>
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/fleche-droit.png"
+            src="../assets/images/File/svg/top.svg"
             alt="close"
             width="12px"
-            class="rotate-90"
           />
         </div>
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/actualise.png"
+            src="../assets/images/File/svg/refresh.svg"
             alt="close"
             width="12px"
           />
@@ -104,21 +103,21 @@
       </div>
 
       <!--  -->
-      <div class="flex items-center gap-1 bg-slate-100 rounded-[5px]">
+      <div class="flex items-center gap-1 bg-gray-800/50 rounded-[5px]">
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/ordi-icon-head.png"
+            src="../assets/images/File/svg/pc.svg"
             alt="close"
             width="12px"
           />
         </div>
         <div
-          class="flex items-center justify-end hover:bg-white/5 py-2 rounded-[4px]"
+          class="flex items-center justify-end py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/ChevronRight.png"
+            src="../assets/images/File/svg/fleche.svg"
             alt="close"
             width="5px"
           />
@@ -129,10 +128,10 @@
           <span class="text-[10px] text-slate-300">Ce PC</span>
         </div>
         <div
-          class="flex items-center justify-end hover:bg-white/5 py-2 rounded-[4px]"
+          class="flex items-center justify-end py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/ChevronRight.png"
+            src="../assets/images/File/svg/fleche.svg"
             alt="close"
             width="5px"
           />
@@ -144,10 +143,10 @@
         </div>
 
         <div
-          class="flex items-center justify-end hover:bg-white/5 py-2 rounded-[4px]"
+          class="flex items-center justify-end py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/ChevronRight.png"
+            src="../assets/images/File/svg/fleche.svg"
             alt="close"
             width="5px"
           />
@@ -158,10 +157,10 @@
           <span class="text-[10px] text-slate-300">MakVieSAinte Projet</span>
         </div>
         <div
-          class="flex items-center justify-end hover:bg-white/5 py-2 rounded-[4px]"
+          class="flex items-center justify-end py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/ChevronRight.png"
+            src="../assets/images/File/svg/fleche.svg"
             alt="close"
             width="5px"
           />
@@ -172,10 +171,10 @@
           <span class="text-[10px] text-slate-300">Open Souce Code</span>
         </div>
         <div
-          class="flex items-center justify-end hover:bg-white/5 py-2 rounded-[4px]"
+          class="flex items-center justify-end py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/ChevronRight.png"
+            src="../assets/images/File/svg/fleche.svg"
             alt="close"
             width="5px"
           />
@@ -189,20 +188,20 @@
 
       <!--  -->
       <div
-        class="flex items-center flex-grow gap-1 my-2 bg-slate-100 rounded-[5px]"
+        class="flex items-center flex-grow gap-1 bg-gray-800/50 hover:bg-gray-800/80 py-0 my-3 rounded-[5px]"
       >
         <div
-          class="flex items-center justify-end hover:bg-white/5 pl-4 pr-2 py-2 rounded-[4px]"
+          class="flex items-center justify-end pl-4 pr-2 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/search-head.png"
+            src="../assets/images/File/svg/recherche.svg"
             alt="close"
             width="12px"
           />
         </div>
 
         <div
-          class="flex items-center justify-start flex-grow hover:bg-white/5 py-2 rounded-[4px]"
+          class="flex items-center justify-start flex-grow py-2 rounded-[4px]"
         >
           <input
             type="text"
@@ -216,86 +215,86 @@
 
     <!-- Top Deux -->
     <div
-      class="top-one flex items-center justify-between gap-2 bg-white/80 w-full h-[48px] px-3 py-1 border-b border-slate-200"
+      class="top-one flex items-center justify-between gap-2 bg-primary w-full h-[48px] px-3 py-1 border-b border-neutral-800"
     >
       <div class="flex items-center gap-0">
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/nouveau-file.png"
+            src="../assets/images/File/svg/nouveau.svg"
             alt="close"
             width="15px"
           />
           <span class="text-[10px] text-slate-300 ml-2">Nouveau</span>
         </div>
 
-        <span class="separator w-[0.8px] h-5 block bg-slate-200 mx-1"></span>
+        <span class="separator w-[0.8px] h-5 block bg-neutral-800 mx-1"></span>
 
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/couper-icon.png"
+            src="../assets/images/File/svg/couper.svg"
             alt="close"
-            width="14px"
+            width="15px"
           />
         </div>
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/copy-icon.png"
+            src="../assets/images/File/svg/copie.svg"
             alt="close"
-            width="14px"
+            width="15px"
           />
         </div>
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/coller-icon.png"
+            src="../assets/images/File/svg/coller.svg"
             alt="close"
-            width="14px"
+            width="15px"
           />
         </div>
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/renommer-icon.png"
+            src="../assets/images/File/svg/renommer.svg"
             alt="close"
-            width="14px"
+            width="15px"
           />
         </div>
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/partager-icon.png"
+            src="../assets/images/File/svg/partager.svg"
             alt="close"
-            width="14px"
+            width="15px"
           />
         </div>
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/supprimer-icon.png"
+            src="../assets/images/File/svg/supprimer.svg"
             alt="close"
-            width="14px"
+            width="15px"
           />
         </div>
 
-        <span class="separator w-[0.8px] h-5 block bg-slate-200 mx-1"></span>
+        <span class="separator w-[0.8px] h-5 block bg-neutral-800 mx-1"></span>
 
         <div
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/trier-icon.png"
+            src="../assets/images/File/svg/trier.svg"
             alt="close"
-            width="14px"
+            width="15px"
           />
           <span class="text-[10px] text-slate-300 ml-2">Trier</span>
         </div>
@@ -303,9 +302,9 @@
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/afficher.png"
+            src="../assets/images/File/svg/afficher.svg"
             alt="close"
-            width="14px"
+            width="15px"
           />
           <span class="text-[10px] text-slate-300 ml-2">Afficher</span>
         </div>
@@ -317,11 +316,11 @@
           class="flex items-center justify-end hover:bg-white/5 px-3 py-2 rounded-[4px]"
         >
           <img
-            src="../assets/images/File/details-icon.png"
+            src="../assets/images/File/svg/detail.svg"
             alt="close"
-            width="54px"
+            width="15px"
           />
-          <!-- <span class="text-[10px] text-slate-300 ml-2">Détails</span> -->
+          <span class="text-[10px] text-slate-300 ml-2">Détails</span>
         </div>
       </div>
     </div>
@@ -365,9 +364,9 @@
             <span class="text-[12px] text-slate-300">Bureau</span>
           </div>
           <img
-            src="../assets/images/File/epingle.png"
+            src="../assets/images/File/pin.svg"
             alt=""
-            width="9px"
+            width="12px"
             class="mr-2"
           />
         </div>
@@ -380,9 +379,9 @@
             <span class="text-[12px] text-slate-300">Documents</span>
           </div>
           <img
-            src="../assets/images/File/epingle.png"
+            src="../assets/images/File/pin.svg"
             alt=""
-            width="9px"
+            width="12px"
             class="mr-2"
           />
         </div>
@@ -399,9 +398,9 @@
             <span class="text-[12px] text-slate-300">Téléchargements</span>
           </div>
           <img
-            src="../assets/images/File/epingle.png"
+            src="../assets/images/File/pin.svg"
             alt=""
-            width="9px"
+            width="12px"
             class="mr-2"
           />
         </div>
@@ -414,9 +413,9 @@
             <span class="text-[12px] text-slate-300">Musique</span>
           </div>
           <img
-            src="../assets/images/File/epingle.png"
+            src="../assets/images/File/pin.svg"
             alt=""
-            width="9px"
+            width="12px"
             class="mr-2"
           />
         </div>
@@ -429,9 +428,9 @@
             <span class="text-[12px] text-slate-300">Photos</span>
           </div>
           <img
-            src="../assets/images/File/epingle.png"
+            src="../assets/images/File/pin.svg"
             alt=""
-            width="9px"
+            width="12px"
             class="mr-2"
           />
         </div>
@@ -444,14 +443,14 @@
             <span class="text-[12px] text-slate-300">Vidéos</span>
           </div>
           <img
-            src="../assets/images/File/epingle.png"
+            src="../assets/images/File/pin.svg"
             alt=""
-            width="9px"
+            width="12px"
             class="mr-2"
           />
         </div>
 
-        <div
+        <d12v
           class="w-full item flex items-center justify-between gap-2 bg-transparent hover:bg-white/5 rounded-[4px] py-2 pl-6 cursor-pointer"
         >
           <div class="flex items-center gap-2">
@@ -462,11 +461,11 @@
             />
             <span class="text-[12px] text-slate-300">MakVieSAinte pro...</span>
           </div>
-          <!-- <img src="../assets/images/File/epingle.png" alt="" width="9px" class="mr-2"> -->
-        </div>
+          <!-- <img src="../assets/images/File/pin.svg" alt="" width="9px" class="mr-2"> -->
+        </d12v>
 
         <span
-          class="separator w-[150px] h-[0.3px] block bg-neutral-800 mx-1 my-1"
+          class="separator w-[150px] h-[0.3px] block bg-slate-100 mx-1 my-1"
         ></span>
 
         <div
@@ -509,30 +508,31 @@
         <div
           class="item w-1/4 flex items-center justify-center flex-col hover:bg-white/5 rounded-[3px] py-3"
         >
-          <img src="../assets/images/File/dossier.png" alt="" />
+          <img src="../assets/images/File/dossier.svg" alt="" width="140px" />
           <span class="text-[14px] text-slate-300">Adobe</span>
         </div>
         <div
           class="item w-1/4 flex items-center justify-center flex-col hover:bg-white/5 rounded-[3px] py-3"
         >
-          <img src="../assets/images/File/dossier.png" alt="" />
+          <img src="../assets/images/File/dossier.svg" alt="" width="140px" />
           <span class="text-[14px] text-slate-300">Cours Udemy</span>
         </div>
 
         <div
           class="item w-1/4 flex items-center justify-center flex-col hover:bg-white/5 rounded-[3px] py-3"
         >
-          <img src="../assets/images/File/dossier.png" alt="" />
+          <img src="../assets/images/File/dossier.svg" alt="" width="140px" />
           <span class="text-[14px] text-slate-300">Projet soutenance BTS</span>
         </div>
         <div
           class="item w-1/4 flex items-center justify-center flex-col hover:bg-white/5 rounded-[3px] py-3"
         >
-          <img src="../assets/images/File/word-file.png" alt="" />
+          <img src="../assets/images/File/word.svg" alt="" width="144px" />
           <span class="text-[14px] text-slate-300">cours-english.docx</span>
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -577,5 +577,5 @@ export default defineComponent({
 </script>
 
 <style>
- 
+
 </style>

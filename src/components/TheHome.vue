@@ -28,7 +28,7 @@
       <div
         v-if="showCustomMenu"
         :style="{ top: customMenuY + 'px', left: customMenuX + 'px' }"
-        class="custom-menu-contextuel flex items-start justify-start flex-col flex-grow w-[290px] fixed backdrop-blur-xl border border-bordure/15 rounded-md overflow-hidden"
+        class="custom-menu-contextuel flex items-start justify-start flex-col flex-grow w-[290px] fixed backdrop-blur-3xl border border-bordure/15 rounded-md overflow-hidden"
       >
         <div
           class="w-full flex items-center justify-between text-sm text-white text-left py-3 px-5 hover:bg-[#ffffff1a]"

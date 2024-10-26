@@ -36,7 +36,7 @@
             </div>
             <div @click="OpenFileExplorer()" class="item flex items-center justify-center flex-col w-[34px] h-[34px] backdrop-blur hover:bg-[#ffffff1a] p-[6px] rounded-[4px]" :class="openFileExplorer ? 'bg-[#ffffff1a]' : ''">
                 <img src="../assets/images/file Explorer.png" alt="windows" class="pb[3px]">
-                <span class="w-[50%] h-[11px] block bg-black rounded-full"></span>
+                <!-- <span class="w-[50%] h-[11px] block bg-black rounded-full"></span> -->
             </div>
             <div class="item w-[34px] h-[34px] backdrop-blur hover:bg-[#ffffff1a] p-[6px] rounded-[4px]">
                 <img src="../assets/images/Microsoft edge.png" alt="windows">
