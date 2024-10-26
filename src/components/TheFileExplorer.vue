@@ -42,6 +42,7 @@
       <!-- Section close et autres -->
       <div class="flex gap-0">
         <div
+         @click="closeModal"
           class="icon-window flex items-center justify-center h-[42px] w-max px-6 hover:bg-gray-800/80"
         >
           <img src="../assets/images/File/svg/trait.svg" alt="" />
@@ -52,6 +53,7 @@
           <img src="../assets/images/File/svg/carre.svg" alt="" />
         </div>
         <div
+          @click="closeModal"
           class="icon-window flex items-center justify-center h-[42px] w-max px-6 hover:bg-red-700"
         >
           <img src="../assets/images/File/svg/x.svg" alt="" />
@@ -537,11 +539,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
+import { defineComponent, onMounted, ref, PropType} from 'vue'
 import interact from 'interactjs'
 
 export default defineComponent({
   name: 'MonComposant',
+
+  props: {
+    isOpen: {
+      type: Boolean as PropType<boolean>,
+      required: true,
+    },
+  },
+  emits: ['close'],
+
+methods: {
+    closeModal() {
+      this.$emit('close');
+    },
+  },
   setup() {
     const draggableElement = ref<HTMLDivElement | null>(null)
 

@@ -50,8 +50,8 @@
         <div class="flex flex-row-reverse items-center gap-1 px-4">
             <div class="flex items-center justify-center backdrop-blur hover:bg-[#ffffff1a] rounded-[4px] px-2 py-0">
                 <div class="item p-[5px] flex items-end justify-center flex-col mr-2">
-                <p class="text-[11px] font-light leading-none">19:19</p>
-                <p class="text-[11px] font-light leading-none pt-[2px]">19/10/2024</p>
+                <p class="text-[11px] font-light leading-none">22:19</p>
+                <p class="text-[11px] font-light leading-none pt-[2px]">25/10/2024</p>
                 </div>
                 <img src="../assets/images/notifications.png" alt="windows" width="16px">
             </div>
@@ -74,8 +74,8 @@
         </div>
 
 
-            <div ref="draggableElement" v-if="openFileExplorer" class="absolute left-[20%] bottom-16">
-            <TheFileExplorerVue></TheFileExplorerVue>
+            <div ref="draggableElement" v-if="openFileExplorer" class="absolute left-[10%] bottom-16">
+            <TheFileExplorerVue :isOpen="openFileExplorer" @close="OpenFileExplorer"></TheFileExplorerVue>
             </div>
     </div>
 </template>
