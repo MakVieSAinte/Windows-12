@@ -539,8 +539,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, PropType} from 'vue'
-import interact from 'interactjs'
+import { defineComponent, onMounted, ref} from 'vue'
+import type { PropType } from 'vue';
+import interact from 'interactjs';
 
 export default defineComponent({
   name: 'MonComposant',

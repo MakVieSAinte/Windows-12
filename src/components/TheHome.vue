@@ -137,13 +137,13 @@
 </template>
 
 <script lang="ts">
-import TheAuth from './TheAuth.vue'
+// import TheAuth from './TheAuth.vue'
 import TheBurreau from './TheBurreau.vue'
 import TheLoad from './TheLoad.vue'
 import TheTacheBarre from './TheTacheBarre.vue'
 
 export default {
-  components: { TheTacheBarre, TheLoad, TheAuth, TheBurreau },
+  components: { TheTacheBarre, TheLoad, TheBurreau },
 
   data() {
     return {
