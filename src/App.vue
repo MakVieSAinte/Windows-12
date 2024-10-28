@@ -1,6 +1,7 @@
 <script lang="ts">
 import { RouterView } from 'vue-router'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+// import { inject } from '@vercel/analytics';
 
 export default {
   component: { RouterView },
